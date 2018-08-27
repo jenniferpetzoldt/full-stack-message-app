@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const pg = require('pg');
 const Pool = pg.Pool;
 const config = {
-  database: 'sql_code_challenge', // the name of the database
+  database: 'message_board', // the name of the database
   host: 'localhost', // where is your database
   port: 5432, // the port number for your database, 5432 is the default
   max: 10, // how many connections at one time
