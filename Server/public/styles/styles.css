@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #F6DDDF;
+    border-radius: 3px;
+    color: #5F6F75;
+}
+
+input {
+    margin: 2%;
+}
+
+form {
+    width: 50%;
+    margin-left: 25%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: #EEC9C8;
+    color: #5F6F75;
+}
+
+h1 {
+    text-align: center;
+    font-size: 350%
+}
+table {
+    width: 80%;
+}
+
+td, th{
+    width: 30%;
+    text-align: center;
+    word-spacing: 2px;
+    margin-left: 33%;
+    border-bottom: 1px solid #DF9C9D;
+}
+
+thead {
+    font-size: 140%;
+}
+
+tr:hover {
+    background-color: #DF9C9D;
+}
