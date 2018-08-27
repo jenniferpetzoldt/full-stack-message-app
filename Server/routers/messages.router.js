@@ -24,6 +24,7 @@ pool.on('error', (error) => {
     console.log('Error connecting to db', error);
 });
 
+//route to pull all messages from database
 router.get('/', function(req, res){
     console.log('in GET route');
     const query = `SELECT * FROM "messages";`;
@@ -36,6 +37,7 @@ router.get('/', function(req, res){
     });
 });
 
+//route to add messaged and commenter's name to database
 router.post('/', function(req, res){
     const messageToAdd = req.body;
     console.log('In POST route:', messageToAdd);

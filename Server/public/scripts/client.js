@@ -3,8 +3,10 @@ let myApp = angular.module('myApp', []);
 myApp.controller('MessagesController', function($http){
     vm = this;
     vm.messages = [];
-    getMessages();
+    getMessages(); //populates the table on page load
 
+
+    //pullse messages from the database
     function getMessages(){
         console.log('in getMessages');
         $http({
@@ -19,6 +21,7 @@ myApp.controller('MessagesController', function($http){
         });
     };
 
+    //sends data to the server
     vm.addMessage = function(messageToAdd){
         console.log('adding message to server:', messageToAdd);
         $http({
@@ -27,8 +30,8 @@ myApp.controller('MessagesController', function($http){
             data: messageToAdd
         }). then(function(response){
             console.log('response from POST', response);
-            clearInputs();
-            getMessages();
+            clearInputs();//clears inputfields on submition
+            getMessages();//updates table with most current data
         }).catch(function(error){
             console.log('POST error', error);
             alert('error with POST');
